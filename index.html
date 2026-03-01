@@ -5,261 +5,742 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hide Calculator - Privacy Policy</title>
     <style>
+        * { box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            max-width: 800px;
+            max-width: 860px;
             margin: 40px auto;
             padding: 20px;
-            line-height: 1.6;
-            color: #333;
+            line-height: 1.75;
+            color: #1f2937;
             background: #f5f5f5;
+            font-size: 15px;
         }
         .container {
             background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 48px;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
         }
         h1 {
-            color: #2563eb;
-            border-bottom: 3px solid #2563eb;
-            padding-bottom: 10px;
+            color: #1d4ed8;
+            border-bottom: 3px solid #1d4ed8;
+            padding-bottom: 12px;
+            font-size: 1.9em;
+            margin-bottom: 6px;
         }
         h2 {
             color: #1e40af;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            margin-top: 42px;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+            border-left: 4px solid #3b82f6;
+            padding-left: 12px;
         }
-        ul {
-            padding-left: 20px;
-        }
-        li {
+        h3 {
+            color: #374151;
+            margin-top: 22px;
             margin-bottom: 8px;
+            font-size: 1.0em;
         }
+        ul, ol { padding-left: 22px; margin: 10px 0; }
+        li { margin-bottom: 7px; }
+        p { margin: 10px 0; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.92em;
+        }
+        th {
+            background: #1d4ed8;
+            color: white;
+            padding: 10px 12px;
+            text-align: left;
+        }
+        td {
+            padding: 9px 12px;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: top;
+        }
+        tr:nth-child(even) td { background: #f9fafb; }
         .highlight {
             background: #eff6ff;
-            padding: 15px;
+            padding: 16px 18px;
             border-left: 4px solid #2563eb;
             margin: 20px 0;
-        }
-        a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .contact {
-            background: #f0fdf4;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 30px;
-            border-left: 4px solid #10b981;
-        }
-        .last-updated {
-            color: #666;
-            font-style: italic;
-            font-size: 0.9em;
-        }
-        .warning {
-            background: #fef3c7;
-            padding: 15px;
-            border-left: 4px solid #f59e0b;
-            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
         }
         .success {
-            background: #d1fae5;
-            padding: 15px;
+            background: #f0fdf4;
+            padding: 16px 18px;
             border-left: 4px solid #10b981;
             margin: 20px 0;
+            border-radius: 0 6px 6px 0;
         }
+        .warning {
+            background: #fffbeb;
+            padding: 16px 18px;
+            border-left: 4px solid #f59e0b;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        .danger {
+            background: #fef2f2;
+            padding: 16px 18px;
+            border-left: 4px solid #ef4444;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        .badge {
+            display: inline-block;
+            background: #1d4ed8;
+            color: white;
+            padding: 2px 9px;
+            border-radius: 4px;
+            font-size: 0.76em;
+            font-weight: 600;
+            margin-right: 5px;
+            letter-spacing: 0.4px;
+        }
+        .badge-green { background: #059669; }
+        .badge-gray  { background: #6b7280; }
+        .contact {
+            background: #f0fdf4;
+            padding: 22px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border: 1px solid #a7f3d0;
+        }
+        .last-updated {
+            color: #6b7280;
+            font-style: italic;
+            font-size: 0.9em;
+            margin-bottom: 24px;
+        }
+        a { color: #2563eb; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .toc {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+        .toc h3 { margin-top: 0; color: #1e40af; }
+        .toc ol { margin: 0; padding-left: 20px; }
+        .toc li { margin-bottom: 5px; }
+        .sdk-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 18px;
+            margin: 14px 0;
+        }
+        .sdk-card h4 { margin: 0 0 8px 0; color: #1e40af; font-size: 1em; }
+        hr { margin: 40px 0; border: none; border-top: 1px solid #e5e7eb; }
+        .footer-note { text-align: center; color: #6b7280; font-size: 0.88em; margin-top: 10px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Privacy Policy for Hide Calculator</h1>
-        <p class="last-updated"><strong>Last Updated:</strong> December 12, 2025</p>
-        
-        <div class="highlight">
-            <strong>Summary:</strong> Hide Calculator stores all your data encrypted and locally on your device. We do not collect, transmit, or share any personal information. You have complete control over your data.
-        </div>
+<div class="container">
 
-        <h2>Introduction</h2>
-        <p>Hide Calculator ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains how our secure photo and video vault application handles your information.</p>
+    <h1>Privacy Policy — Hide Calculator</h1>
+    <p class="last-updated">
+        <strong>Last Updated:</strong> March 1, 2026 &nbsp;|&nbsp;
+        <strong>Effective Date:</strong> March 1, 2026 &nbsp;|&nbsp;
+        <strong>App Version:</strong> 1.1.2
+    </p>
 
-        <h2>Information We Collect</h2>
-
-        <h3>Information Stored Locally on Your Device</h3>
-        <p>Hide Calculator stores all data locally on your device. We collect and store:</p>
-        <ul>
-            <li><strong>PIN/Password:</strong> Your security PIN is encrypted and stored securely on your device using Android Keystore</li>
-            <li><strong>Media Files:</strong> Photos and videos you import into the vault are encrypted using AES-256-GCM encryption and stored locally</li>
-            <li><strong>App Preferences:</strong> Your settings such as theme preferences, auto-lock duration, and other configuration options</li>
-            <li><strong>Albums and Organization Data:</strong> Album names, favorites, tags, and organizational information for your media</li>
-            <li><strong>Intruder Detection Photos:</strong> If enabled, photos captured during failed unlock attempts are stored locally</li>
-        </ul>
-
-        <h3>Information We DO NOT Collect</h3>
-        <div class="success">
-            <ul>
-                <li>We do <strong>NOT</strong> collect any personal information</li>
-                <li>We do <strong>NOT</strong> transmit any data to external servers</li>
-                <li>We do <strong>NOT</strong> track your usage or behavior</li>
-                <li>We do <strong>NOT</strong> share your data with third parties</li>
-                <li>We do <strong>NOT</strong> use analytics or tracking services</li>
-                <li>We do <strong>NOT</strong> access your location data</li>
-                <li>We do <strong>NOT</strong> require account creation or authentication with external services</li>
-            </ul>
-        </div>
-
-        <h2>Data Storage and Security</h2>
-
-        <h3>Local Storage Only</h3>
-        <div class="highlight">
-            <p><strong>All data processed by Hide Calculator remains exclusively on your device.</strong> The app:</p>
-            <ul>
-                <li>Stores encrypted media files in the app's private storage area</li>
-                <li>Does not upload, sync, or backup data to cloud services</li>
-                <li>Does not require internet connection to function</li>
-                <li>Cannot be accessed by other applications on your device</li>
-            </ul>
-        </div>
-
-        <h3>Encryption</h3>
-        <ul>
-            <li><strong>Media Encryption:</strong> All photos and videos are encrypted using military-grade AES-256-GCM encryption</li>
-            <li><strong>Key Storage:</strong> Encryption keys are generated and stored securely using Android Keystore System</li>
-            <li><strong>Device-Bound Security:</strong> Encryption keys are bound to your specific device and cannot be extracted</li>
-        </ul>
-
-        <h2>Permissions</h2>
-        <p>Hide Calculator requires the following permissions to function:</p>
-
-        <h3>Required Permissions</h3>
-        <ul>
-            <li><strong>CAMERA:</strong> To capture photos directly into the vault and for intruder detection feature</li>
-            <li><strong>READ_MEDIA_IMAGES / READ_MEDIA_VIDEO</strong> (Android 13+) or <strong>READ_EXTERNAL_STORAGE</strong> (Android 12 and below): To import existing photos and videos from your device into the vault</li>
-            <li><strong>WRITE_EXTERNAL_STORAGE</strong> (Android 12 and below): To export media from the vault when you choose to share or move files out</li>
-        </ul>
-
-        <h3>Optional Permissions</h3>
-        <ul>
-            <li><strong>USE_BIOMETRIC / USE_FINGERPRINT:</strong> To enable fingerprint or face unlock for convenient access to your vault</li>
-        </ul>
-
-        <p>All permissions are used solely for their stated purpose and no data accessed through these permissions is transmitted off your device.</p>
-
-        <h2>Data Deletion</h2>
-
-        <h3>Secure Deletion</h3>
-        <p>When you delete files from the vault:</p>
-        <ul>
-            <li>Files are moved to a recycle bin with a 30-day retention period</li>
-            <li>Permanently deleted files are securely overwritten multiple times to prevent recovery</li>
-            <li>You can manually empty the recycle bin at any time</li>
-        </ul>
-
-        <h3>Uninstalling the App</h3>
-        <div class="warning">
-            <p><strong>Important:</strong> If you uninstall Hide Calculator:</p>
-            <ul>
-                <li>All encrypted data stored by the app is permanently deleted</li>
-                <li>Your PIN, settings, and all vault contents are removed from your device</li>
-                <li>This action is irreversible and data cannot be recovered</li>
-            </ul>
-        </div>
-
-        <h2>Children's Privacy</h2>
-        <p>Hide Calculator does not knowingly collect information from children under 13 years of age. The app is designed for general audiences and does not contain content specifically targeted at children. If you are a parent or guardian and believe your child has used this app, please note that all data remains on the device and can be removed by uninstalling the application.</p>
-
-        <h2>Third-Party Services</h2>
-        <p>Hide Calculator does not integrate with or transmit data to any third-party services, including:</p>
-        <ul>
-            <li>Analytics services</li>
-            <li>Advertising networks</li>
-            <li>Cloud storage providers</li>
-            <li>Social media platforms</li>
-            <li>Data brokers</li>
-        </ul>
-        <p>The app operates entirely offline and independently.</p>
-
-        <h2>Data Retention</h2>
-        <ul>
-            <li><strong>Vault Data:</strong> Retained locally on your device until you manually delete it or uninstall the app</li>
-            <li><strong>Recycle Bin:</strong> Deleted items are retained for 30 days before permanent deletion</li>
-            <li><strong>Settings and Preferences:</strong> Retained until you clear app data or uninstall the app</li>
-        </ul>
-
-        <h2>Your Rights and Control</h2>
-        <p>You have complete control over your data:</p>
-        <ul>
-            <li><strong>Access:</strong> All your data is accessible through the app interface</li>
-            <li><strong>Modification:</strong> You can organize, rename, and modify your vault contents at any time</li>
-            <li><strong>Deletion:</strong> You can delete individual files, albums, or all vault contents</li>
-            <li><strong>Export:</strong> You can export media from the vault back to your device gallery</li>
-            <li><strong>Data Portability:</strong> Since all data is stored locally, you maintain complete control</li>
-        </ul>
-
-        <h2>Security Measures</h2>
-        <p>We implement robust security measures:</p>
-        <ul>
-            <li>AES-256-GCM encryption for all media files</li>
-            <li>Secure PIN storage with brute-force protection</li>
-            <li>Lockout mechanism after multiple failed attempts</li>
-            <li>Optional biometric authentication</li>
-            <li>Intruder detection with photo capture</li>
-            <li>Secure deletion with file overwriting</li>
-            <li>No network transmission of sensitive data</li>
-        </ul>
-
-        <h2>Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy from time to time. When we make changes:</p>
-        <ul>
-            <li>The "Last Updated" date at the top will be revised</li>
-            <li>Significant changes will be communicated through the app or app store listing</li>
-            <li>Continued use of the app after changes constitutes acceptance of the updated policy</li>
-        </ul>
-
-        <h2>Legal Compliance</h2>
-        <p>Hide Calculator complies with:</p>
-        <ul>
-            <li>Google Play Store policies</li>
-            <li>General Data Protection Regulation (GDPR) principles</li>
-            <li>California Consumer Privacy Act (CCPA) principles</li>
-            <li>Other applicable privacy laws and regulations</li>
-        </ul>
-        <p>Since we do not collect, store, or process personal data on external servers, most data protection regulations regarding data controllers do not apply to our operations.</p>
-
-        <div class="contact">
-            <h2>Contact Us</h2>
-            <p>If you have questions, concerns, or requests regarding this Privacy Policy:</p>
-            <p><strong>Email:</strong> <a href="mailto:un0scroll@gmail.com">un0scroll@gmail.com</a></p>
-            <p><strong>Developer:</strong> Alok and Himanshu</p>
-            <p><strong>Response Time:</strong> We aim to respond within 48 hours</p>
-            <p style="margin-top: 10px;"><em>Note: Since all data is stored locally on your device, we cannot access, retrieve, or modify your vault data. We can only provide guidance on using the app features.</em></p>
-        </div>
-
-        <h2>Disclaimer</h2>
-        <div class="warning">
-            <p><strong>Important:</strong> Hide Calculator provides strong encryption and security features, but:</p>
-            <ul>
-                <li>You are responsible for remembering your PIN</li>
-                <li>Lost PINs cannot be recovered due to our zero-knowledge security design</li>
-                <li>We recommend backing up important files through secure export before deletion</li>
-                <li>Security also depends on your device's overall security (screen lock, OS updates, etc.)</li>
-            </ul>
-        </div>
-
-        <div class="success">
-            <p><strong>Summary:</strong> Hide Calculator is a privacy-first application that stores all data encrypted and locally on your device. We do not collect, transmit, or share any of your personal information or vault contents. You maintain complete control and ownership of your data at all times.</p>
-        </div>
-
-        <hr style="margin: 40px 0; border: none; border-top: 1px solid #e5e7eb;">
-        
-        <p style="text-align: center; color: #666; font-size: 0.9em;">
-            <strong>Hide Calculator</strong> - Secure Photo & Video Vault<br>
-            Your privacy is our priority. All data stays on your device, encrypted and secure.
-        </p>
+    <div class="highlight">
+        <strong>Plain-Language Summary:</strong> Hide Calculator is a secure photo and video vault disguised as a working calculator. Nearly all of your data — your files, PIN, and preferences — is stored only on your device, encrypted, and never leaves it. The only data that goes to an external server is the limited technical information required by <strong>Google AdMob</strong> to display banner advertisements. We have no other third-party SDKs. We do not use any analytics, crash-reporting, or cloud services.
     </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <ol>
+            <li><a href="#s1">About This App &amp; Policy</a></li>
+            <li><a href="#s2">What Data Is Collected &amp; Where It Lives</a></li>
+            <li><a href="#s3">How We Use Your Data</a></li>
+            <li><a href="#s4">Third-Party SDKs &amp; Services (AdMob Only)</a></li>
+            <li><a href="#s5">Permissions — Full Explanation</a></li>
+            <li><a href="#s6">Data Safety — Google Play Disclosure</a></li>
+            <li><a href="#s7">Data Sharing &amp; Disclosure</a></li>
+            <li><a href="#s8">Data Retention</a></li>
+            <li><a href="#s9">Security Architecture</a></li>
+            <li><a href="#s10">Your Rights &amp; Controls</a></li>
+            <li><a href="#s11">Children's Privacy (COPPA)</a></li>
+            <li><a href="#s12">International Users — GDPR &amp; CCPA</a></li>
+            <li><a href="#s13">Policy Updates</a></li>
+            <li><a href="#s14">Legal Compliance &amp; Google Play</a></li>
+            <li><a href="#s15">Disclaimer</a></li>
+            <li><a href="#s16">Contact Us</a></li>
+        </ol>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <h2 id="s1">1. About This App &amp; Policy</h2>
+
+    <p><strong>App Name:</strong> Hide Calculator — Secure Photo &amp; Video Vault<br>
+    <strong>Package:</strong> com.hidecalculator.vault<br>
+    <strong>Version:</strong> 1.1.2 (versionCode 4)<br>
+    <strong>Platform:</strong> Android 8.0 (API 26) and above<br>
+    <strong>Developer:</strong> Alok and Himanshu<br>
+    <strong>Contact:</strong> <a href="mailto:un0scroll@gmail.com">un0scroll@gmail.com</a></p>
+
+    <p>Hide Calculator is a privacy-first application that presents itself as a fully functional calculator. Users access their encrypted photo and video vault by entering a secret PIN on the calculator screen. This policy explains exactly what information is collected, why, how it is used, and what rights you have.</p>
+
+    <p>By installing or using Hide Calculator, you agree to this Privacy Policy. If you do not agree, please uninstall the app. Upon uninstallation, all data stored by the app on your device is permanently deleted.</p>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <h2 id="s2">2. What Data Is Collected &amp; Where It Lives</h2>
+
+    <h3>2.1 Data Stored Exclusively On Your Device (Never Transmitted)</h3>
+    <p>The following data is created, processed, and stored only on your device. It is never uploaded, synced, or transmitted anywhere — including to us.</p>
+
+    <table>
+        <tr>
+            <th>Data</th>
+            <th>How It Is Stored</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td><strong>Vault media files</strong><br>(photos, videos, GIFs)</td>
+            <td>Encrypted on-device<br>(app-private directory)</td>
+            <td>Each file is encrypted with AES-256-GCM using a key in Android Keystore before writing to disk. Files are stored in the app's private <code>files/vault/</code> directory, which is inaccessible to other apps.</td>
+        </tr>
+        <tr>
+            <td><strong>Encrypted thumbnails</strong></td>
+            <td>Encrypted on-device<br>(app-private directory)</td>
+            <td>Low-resolution previews generated for fast gallery loading, also encrypted and stored in <code>files/thumbnails/</code>.</td>
+        </tr>
+        <tr>
+            <td><strong>Media metadata</strong></td>
+            <td>Local Room (SQLite) database</td>
+            <td>Stores file names, encrypted file paths, MIME types, file sizes, dimensions, duration (video), date added, album assignments, favorites, tags, and deletion timestamps. <em>The database does not store the actual media content.</em></td>
+        </tr>
+        <tr>
+            <td><strong>PIN / password</strong></td>
+            <td>EncryptedSharedPreferences<br>(Android Keystore)</td>
+            <td>Your PIN is <strong>never stored in plain text</strong>. It is hashed using PBKDF2WithHmacSHA256 (100,000 iterations, 32-byte random salt). Only the salted hash is stored, inside EncryptedSharedPreferences backed by the Android Keystore.</td>
+        </tr>
+        <tr>
+            <td><strong>Decoy PIN</strong> (if enabled)</td>
+            <td>EncryptedSharedPreferences<br>(Android Keystore)</td>
+            <td>Same hashing scheme as the main PIN. Entering the decoy PIN opens a separate, empty vault to protect you in coercion scenarios.</td>
+        </tr>
+        <tr>
+            <td><strong>Intruder detection photos</strong> (if enabled)</td>
+            <td>Encrypted on-device<br>(<code>files/intruders/</code>)</td>
+            <td>If this optional feature is enabled, a front-camera photo is silently captured on each failed unlock attempt. Each photo is encrypted immediately and stored locally. They are never transmitted.</td>
+        </tr>
+        <tr>
+            <td><strong>Recycle bin</strong></td>
+            <td>Encrypted on-device</td>
+            <td>Deleted vault files are retained in the recycle bin for up to 30 days (configurable), then permanently and securely overwritten.</td>
+        </tr>
+        <tr>
+            <td><strong>App preferences</strong></td>
+            <td>DataStore (on-device)</td>
+            <td>Stores non-sensitive settings: theme mode (Light/Dark/System), dynamic color toggle, grid column count, sort order, auto-lock timeout, biometric unlock toggle, intruder detection toggle, decoy vault toggle, recycle bin retention days, calculator haptic feedback, and app icon choice. Some security-sensitive flags (PIN-set status, lockout state) are stored in EncryptedSharedPreferences.</td>
+        </tr>
+        <tr>
+            <td><strong>Temporary decrypted files</strong></td>
+            <td>App cache only (<code>cache/temp_media/</code>)</td>
+            <td>When you view or share a file, a temporary decrypted copy is created in the app's private cache. These files are <strong>securely overwritten and deleted on the next app startup</strong> even if the app was force-stopped mid-session.</td>
+        </tr>
+    </table>
+
+    <div class="success">
+        <strong>Android Backup Explicitly Disabled:</strong> The app sets <code>android:allowBackup="false"</code> and uses a <code>data_extraction_rules.xml</code> file that explicitly excludes the vault directory, thumbnails directory, Room database, and all security preferences from both <strong>Google Cloud Backup</strong> and <strong>device-to-device transfer</strong>. Your vault contents can never be restored from a Google account backup.
+    </div>
+
+    <h3>2.2 Data Collected Automatically by Google AdMob</h3>
+    <p>The app displays banner advertisements powered by Google AdMob (<code>play-services-ads:23.5.0</code>). AdMob automatically collects limited technical data from your device when ads load. <strong>This is the only data that leaves your device.</strong> We do not control or have access to this data — it is processed by Google subject to their own privacy policy.</p>
+
+    <table>
+        <tr>
+            <th>Data Type</th>
+            <th>Purpose</th>
+        </tr>
+        <tr>
+            <td>Advertising ID (Google Advertising ID / GAID)</td>
+            <td>Serve relevant ads; frequency capping; ad measurement</td>
+        </tr>
+        <tr>
+            <td>Approximate location (derived from IP address)</td>
+            <td>Serve geographically relevant advertisements</td>
+        </tr>
+        <tr>
+            <td>Device model, Android version</td>
+            <td>Ad format compatibility and targeting</td>
+        </tr>
+        <tr>
+            <td>IP address (transient)</td>
+            <td>Network request routing; fraud prevention</td>
+        </tr>
+        <tr>
+            <td>App interaction signals (ad views, clicks)</td>
+            <td>Ad performance measurement</td>
+        </tr>
+    </table>
+
+    <div class="success">
+        <strong>No Other Third-Party SDKs:</strong> Hide Calculator does <strong>not</strong> integrate Firebase, analytics tools, crash-reporting services, social media SDKs, data brokers, behavioral tracking networks, or any other external services. AdMob is the only SDK that makes outbound network connections.
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <h2 id="s3">3. How We Use Your Data</h2>
+
+    <h3>3.1 On-Device Data</h3>
+    <ul>
+        <li><strong>Vault operation:</strong> Encrypting, storing, organizing, and displaying your photos and videos inside the vault.</li>
+        <li><strong>Authentication:</strong> Verifying your PIN or biometric credential to unlock the vault. The app supports a <strong>Decoy Vault</strong> — a separate PIN that opens an empty vault, designed to protect you in coercion scenarios.</li>
+        <li><strong>Calculator disguise:</strong> Running the fully functional calculator interface that disguises the app. The secret vault is accessed by entering your PIN followed by "=" on the calculator.</li>
+        <li><strong>Intruder detection (optional):</strong> If you enable this feature, capturing and securely storing a front-camera photo when an incorrect PIN is entered, so you can identify unauthorized access attempts.</li>
+        <li><strong>Secure deletion:</strong> When files are permanently deleted, they are overwritten 3 times (0x00, 0xFF, random data — DoD 5220.22-M standard) before being removed, making forensic recovery impractical.</li>
+        <li><strong>Startup cleanup:</strong> On every app launch, any temporary decrypted files left from a previous session (e.g., after a crash) are securely overwritten and deleted before any UI appears.</li>
+        <li><strong>Share-to-vault:</strong> You can share photos and videos directly from other apps into the vault using Android's Share Sheet. The app receives the shared file via intent, encrypts it, and deletes the intent reference.</li>
+    </ul>
+
+    <h3>3.2 AdMob Data</h3>
+    <p>Data collected by AdMob is used solely by Google to display banner advertisements within the app. This supports the free version of the app. We do not receive, process, or profit from your individual AdMob data beyond the general ad revenue the app earns.</p>
+
+    <p>We do not use any collected data to build personal profiles, make automated decisions about you, or sell your information.</p>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <h2 id="s4">4. Third-Party SDKs &amp; Services</h2>
+
+    <p>Hide Calculator integrates <strong>one</strong> third-party SDK that involves external data transmission:</p>
+
+    <div class="sdk-card">
+        <h4>Google AdMob (play-services-ads v23.5.0)</h4>
+        <p><strong>Purpose:</strong> Display banner advertisements to support the free app.<br>
+        <strong>Ad Format:</strong> Banner ads shown at the bottom of select screens.<br>
+        <strong>Data Collected:</strong> Advertising ID, device info, IP address, ad interaction signals.<br>
+        <strong>Data Sent To:</strong> Google LLC (United States and other countries where Google operates).<br>
+        <strong>Google Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a><br>
+        <strong>AdMob Help:</strong> <a href="https://support.google.com/admob/answer/6128543" target="_blank">https://support.google.com/admob/answer/6128543</a><br>
+        <strong>Opt-Out:</strong> You can opt out of personalized ads or reset your Advertising ID via <em>Android Settings &gt; Google &gt; Ads</em>. See Section 10.2 for step-by-step instructions.</p>
+    </div>
+
+    <p>All other libraries in the app (Room, DataStore, Coil, ExoPlayer, CameraX, Hilt, AndroidX Security-Crypto, WorkManager, etc.) are local-only Android libraries from Google/Jetpack. They do not transmit any data to external servers.</p>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <h2 id="s5">5. Permissions — Full Explanation</h2>
+    <p>The app requests only the permissions needed for its stated features. No permission is used to collect, transmit, or share your vault contents.</p>
+
+    <table>
+        <tr>
+            <th>Permission</th>
+            <th>Why It Is Needed</th>
+            <th>Data Leaves Device?</th>
+        </tr>
+        <tr>
+            <td><strong>READ_MEDIA_IMAGES</strong><br><small>(Android 13+ / API 33+)</small></td>
+            <td>Allows you to select photos from your gallery to import into the vault.</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td><strong>READ_MEDIA_VIDEO</strong><br><small>(Android 13+ / API 33+)</small></td>
+            <td>Allows you to select videos from your gallery to import into the vault.</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td><strong>READ_EXTERNAL_STORAGE</strong><br><small>(Android ≤ 12 / API ≤ 32 only)</small></td>
+            <td>Legacy permission for reading media files on Android 12 and below. Same purpose as READ_MEDIA_IMAGES/VIDEO above.</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td><strong>WRITE_EXTERNAL_STORAGE</strong><br><small>(Android ≤ 9 / API ≤ 29 only)</small></td>
+            <td>Legacy permission required to export vault media back to the device gallery on Android 9 and below.</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td><strong>CAMERA</strong></td>
+            <td>Two purposes: (1) Capture photos and videos directly into the vault. (2) If intruder detection is enabled, capture a selfie using the front camera on failed unlock attempts. All captured media stays on your device.</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td><strong>USE_BIOMETRIC</strong></td>
+            <td>Enables optional fingerprint or face unlock. All biometric operations are handled by the Android OS Biometric API — the app never reads, stores, or has access to your biometric data.</td>
+            <td>No (handled by OS)</td>
+        </tr>
+        <tr>
+            <td><strong>VIBRATE</strong></td>
+            <td>Provides haptic feedback on calculator button presses and at unlock events for a realistic calculator feel. No data is involved.</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td><strong>POST_NOTIFICATIONS</strong></td>
+            <td>Required on Android 13+ to display any future in-app notifications (e.g., recycle bin cleanup reminders). The app does not send marketing notifications or share notification data externally.</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td><strong>INTERNET</strong></td>
+            <td>Required exclusively by Google AdMob to fetch and display banner advertisements. The vault itself has no internet access and vault contents are never transmitted.</td>
+            <td>Only for ad requests (AdMob)</td>
+        </tr>
+        <tr>
+            <td><strong>ACCESS_NETWORK_STATE</strong></td>
+            <td>Allows AdMob to check whether a network connection is available before making an ad request, reducing unnecessary failed network calls.</td>
+            <td>No</td>
+        </tr>
+    </table>
+
+    <p>The Camera feature is declared as <strong>optional</strong> (<code>android:required="false"</code>). The app can be installed on devices without a camera; the camera-dependent features (direct capture and intruder detection) will simply be unavailable.</p>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <h2 id="s6">6. Data Safety — Google Play Disclosure</h2>
+    <p>The following tables summarize our Data Safety declarations as submitted in the Google Play Console, in accordance with the <a href="https://support.google.com/googleplay/android-developer/answer/10144311" target="_blank">Google Play User Data Policy</a> and the <a href="https://support.google.com/googleplay/android-developer/answer/9859455" target="_blank">Data Safety section requirements</a>.</p>
+
+    <h3>Data Shared with Third Parties</h3>
+    <table>
+        <tr>
+            <th>Data Type</th>
+            <th>Shared With</th>
+            <th>Purpose</th>
+            <th>Optional?</th>
+        </tr>
+        <tr>
+            <td>Device or other identifiers (Advertising ID)</td>
+            <td>Google AdMob</td>
+            <td>Advertising</td>
+            <td>Yes — opt out via Android Settings &gt; Google &gt; Ads</td>
+        </tr>
+        <tr>
+            <td>Approximate location (IP-derived)</td>
+            <td>Google AdMob</td>
+            <td>Advertising</td>
+            <td>Yes — opt out via Android ad personalization settings</td>
+        </tr>
+        <tr>
+            <td>App interactions (ad views / clicks)</td>
+            <td>Google AdMob</td>
+            <td>Advertising</td>
+            <td>No — inherent to ad display</td>
+        </tr>
+    </table>
+
+    <h3>Data Collected (Stays On Device — Not Shared)</h3>
+    <table>
+        <tr>
+            <th>Data Type</th>
+            <th>Purpose</th>
+            <th>Encrypted?</th>
+        </tr>
+        <tr>
+            <td>Photos and videos</td>
+            <td>Core vault functionality</td>
+            <td>Yes — AES-256-GCM on-device</td>
+        </tr>
+        <tr>
+            <td>App activity (PIN entry, settings changes)</td>
+            <td>Authentication, app functionality</td>
+            <td>Yes — EncryptedSharedPreferences</td>
+        </tr>
+        <tr>
+            <td>App interactions (file organization, album creation)</td>
+            <td>App functionality</td>
+            <td>Stored in local encrypted database</td>
+        </tr>
+    </table>
+
+    <h3>Data Never Collected</h3>
+    <table>
+        <tr>
+            <th>Data Type</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td>Name, email, phone number</td>
+            <td>No account or registration is required</td>
+        </tr>
+        <tr>
+            <td>Precise GPS location</td>
+            <td>Location permission is never requested</td>
+        </tr>
+        <tr>
+            <td>Contacts, messages, call logs</td>
+            <td>Not requested or accessed</td>
+        </tr>
+        <tr>
+            <td>Health or financial data</td>
+            <td>Not applicable</td>
+        </tr>
+        <tr>
+            <td>Crash logs or diagnostics</td>
+            <td>No crash-reporting SDK is integrated</td>
+        </tr>
+        <tr>
+            <td>Usage analytics</td>
+            <td>No analytics SDK is integrated</td>
+        </tr>
+        <tr>
+            <td>Biometric data</td>
+            <td>Biometric operations are handled entirely by Android OS</td>
+        </tr>
+    </table>
+
+    <div class="highlight">
+        <strong>Data Security for Play Console:</strong> Vault data is encrypted on-device with AES-256-GCM. Data shared with AdMob is transmitted over HTTPS/TLS. Users can request deletion of all on-device data by clearing app data or uninstalling the app.
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <h2 id="s7">7. Data Sharing &amp; Disclosure</h2>
+    <p>We do not sell your personal data. Your vault contents are never shared with anyone under any circumstance. The only external data transmission is the limited technical data sent to Google AdMob as described above.</p>
+
+    <ul>
+        <li><strong>Google AdMob:</strong> Limited technical data is transmitted to Google for ad serving purposes, as described in Section 4. This is governed by Google's terms — not sold to other parties by us.</li>
+        <li><strong>Legal Requirements:</strong> We may disclose information if required by law, court order, or governmental authority. Since vault contents are device-only and cryptographically inaccessible to us, we have no ability to disclose them even if compelled.</li>
+        <li><strong>Business Transfers:</strong> If the app or developer business is sold or transferred, any data practices described in this policy will be maintained. Users will be notified of any material change in advance.</li>
+    </ul>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <h2 id="s8">8. Data Retention</h2>
+    <table>
+        <tr>
+            <th>Data</th>
+            <th>Storage Location</th>
+            <th>Retention Period</th>
+        </tr>
+        <tr>
+            <td>Vault media (photos, videos, GIFs)</td>
+            <td>On-device, encrypted (app-private)</td>
+            <td>Until you delete them or uninstall the app</td>
+        </tr>
+        <tr>
+            <td>Recycle bin files</td>
+            <td>On-device, encrypted (app-private)</td>
+            <td>30 days (configurable), then securely overwritten and deleted</td>
+        </tr>
+        <tr>
+            <td>Media metadata (Room database)</td>
+            <td>On-device (app-private SQLite)</td>
+            <td>Until you delete the item or uninstall the app</td>
+        </tr>
+        <tr>
+            <td>PIN hash &amp; salt</td>
+            <td>EncryptedSharedPreferences / Android Keystore</td>
+            <td>Until PIN is changed, app data is cleared, or app is uninstalled</td>
+        </tr>
+        <tr>
+            <td>Decoy PIN hash &amp; salt</td>
+            <td>EncryptedSharedPreferences / Android Keystore</td>
+            <td>Until Decoy PIN is disabled or app is uninstalled</td>
+        </tr>
+        <tr>
+            <td>Intruder detection photos</td>
+            <td>On-device, encrypted (app-private)</td>
+            <td>Until you delete them from the Intruder Log screen, or uninstall</td>
+        </tr>
+        <tr>
+            <td>Temporary decrypted files</td>
+            <td>App cache only (<code>cache/temp_media/</code>)</td>
+            <td>Securely overwritten and deleted on the next app startup</td>
+        </tr>
+        <tr>
+            <td>App preferences</td>
+            <td>DataStore (on-device)</td>
+            <td>Until app data is cleared or uninstalled</td>
+        </tr>
+        <tr>
+            <td>AdMob ad interaction data</td>
+            <td>Google servers</td>
+            <td>Per Google's own data retention policy</td>
+        </tr>
+    </table>
+
+    <p>Uninstalling Hide Calculator permanently deletes all data the app stored on your device. We have no technical ability to recover it.</p>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <h2 id="s9">9. Security Architecture</h2>
+    <p>Security is the core purpose of this app. We implement protections at every layer:</p>
+
+    <h3>9.1 Encryption</h3>
+    <ul>
+        <li><strong>AES-256-GCM:</strong> All vault files (photos, videos, thumbnails, intruder photos) are encrypted using AES-256-GCM with authenticated encryption before being written to disk. The encryption scheme used is <code>AES256_GCM_HKDF_4KB</code> via AndroidX Security-Crypto's <code>EncryptedFile</code>.</li>
+        <li><strong>Android Keystore:</strong> The encryption master key is generated and stored in the Android Keystore System. Where hardware-backed security is available (Android 9+ with StrongBox), the key is stored in a dedicated hardware security module (HSM/StrongBox). Keys cannot be exported or extracted from the device.</li>
+        <li><strong>Device-Bound Keys:</strong> Keys are tied to your specific device. Encrypted files copied from the device to another device cannot be decrypted.</li>
+    </ul>
+
+    <h3>9.2 PIN &amp; Authentication Security</h3>
+    <ul>
+        <li><strong>PBKDF2WithHmacSHA256:</strong> Your PIN is hashed using PBKDF2 with HMAC-SHA256, a 32-byte cryptographically random salt, and 100,000 iterations. Only the hash is stored — the plain PIN is cleared from memory immediately after hashing.</li>
+        <li><strong>EncryptedSharedPreferences:</strong> PIN hashes, salts, and security flags are stored in EncryptedSharedPreferences (AES256-SIV key encryption, AES256-GCM value encryption), backed by Android Keystore.</li>
+        <li><strong>Brute-Force Protection &amp; Exponential Backoff:</strong> After 5 failed PIN attempts, the app enters a lockout. Subsequent lockout durations escalate: 30 seconds → 1 minute → 5 minutes → 15 minutes → 1 hour maximum.</li>
+        <li><strong>Decoy Vault:</strong> You can configure a secondary "decoy" PIN. Entering this PIN opens an empty vault, allowing you to protect yourself in situations where you are coerced into revealing your PIN. The main vault remains hidden.</li>
+        <li><strong>Biometric Authentication:</strong> Fingerprint and face unlock are supported. All biometric processing is handled entirely by the Android Biometric API — the app never accesses raw biometric data.</li>
+    </ul>
+
+    <h3>9.3 Storage &amp; File Security</h3>
+    <ul>
+        <li><strong>App-Private Storage:</strong> All vault files are stored in the app's private internal directory (<code>files/vault/</code>). Other apps on the device cannot access this directory, even without root access.</li>
+        <li><strong>MediaStore Exclusion:</strong> A <code>.nomedia</code> file is created in the vault directory to prevent the Android MediaStore from indexing or thumbnailing vault contents. Vault files will never appear in the system gallery.</li>
+        <li><strong>Secure Deletion (DoD 5220.22-M, 3-Pass):</strong> When a file is permanently deleted, it is overwritten three times — first with 0x00 bytes, then with 0xFF bytes, then with cryptographically random data — before the file entry is deleted. Each pass is synced to disk. This makes forensic recovery impractical.</li>
+        <li><strong>Startup Temp-File Cleanup:</strong> Any temporary decrypted files left in <code>cache/temp_media/</code> from a prior session (e.g., due to a crash or force-stop) are securely overwritten and deleted every time the app starts, before any content is displayed.</li>
+        <li><strong>Backup Disabled:</strong> <code>android:allowBackup="false"</code> is set. Additionally, <code>data_extraction_rules.xml</code> explicitly excludes the vault, thumbnails, database, and all security preferences from Google Cloud Backup and Android device-to-device transfer.</li>
+    </ul>
+
+    <h3>9.4 Network Security</h3>
+    <ul>
+        <li>Vault contents have no network access path. The INTERNET permission is used exclusively by AdMob.</li>
+        <li>All AdMob network traffic uses HTTPS/TLS encrypted connections.</li>
+        <li>There is no cloud sync, no remote API, and no server-side component to this application.</li>
+    </ul>
+
+    <div class="warning">
+        <strong>User Responsibility:</strong> The security of your vault also depends on your device's overall security posture. We recommend: keeping your Android OS updated, using a strong device screen lock, not sharing your vault PIN with others, and regularly exporting important media to a secure backup. A forgotten PIN cannot be recovered — this is by design.
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <h2 id="s10">10. Your Rights &amp; Controls</h2>
+
+    <h3>10.1 Direct In-App Controls</h3>
+    <ul>
+        <li><strong>Access:</strong> View all vault contents at any time after authenticating with your PIN or biometric.</li>
+        <li><strong>Organize:</strong> Create albums, add favorites, assign tags, rename files, and move files between albums.</li>
+        <li><strong>Export:</strong> Export any photo or video from the vault back to your device gallery at any time.</li>
+        <li><strong>Delete:</strong> Delete individual files, entire albums, or all vault contents. Items go to the recycle bin first; you can permanently delete them immediately or wait for automatic secure deletion after the retention period (default: 30 days).</li>
+        <li><strong>Change PIN:</strong> Change your main vault PIN or decoy PIN at any time from Settings.</li>
+        <li><strong>Disable Intruder Detection:</strong> You can disable the intruder detection feature in Settings. Existing intruder photos can be deleted from the Intruder Log screen.</li>
+        <li><strong>Full Data Wipe:</strong> Clear all app data via <em>Android Settings &gt; Apps &gt; Hide Calculator &gt; Storage &gt; Clear Data</em>. This permanently removes all vault contents, the database, the PIN, and all preferences from your device.</li>
+    </ul>
+
+    <h3>10.2 Ad Personalization Opt-Out</h3>
+    <p>To opt out of personalized advertising served by AdMob:</p>
+    <ol>
+        <li>Open <strong>Android Settings</strong>.</li>
+        <li>Navigate to <strong>Google &gt; Ads</strong> (path may vary by device manufacturer).</li>
+        <li>Enable <strong>"Opt out of Ads Personalization"</strong> or tap <strong>"Reset advertising ID"</strong> to generate a new anonymous ID.</li>
+    </ol>
+    <p>You will still see ads after opting out, but they will not be personalized based on your Advertising ID. This setting applies device-wide to all apps using AdMob.</p>
+
+    <h3>10.3 Submitting Data Requests</h3>
+    <p>For any questions about your data or to submit a formal data request (access, correction, deletion, objection), contact us at <a href="mailto:un0scroll@gmail.com">un0scroll@gmail.com</a>.</p>
+    <p>Please note: vault contents exist exclusively on your physical device and are cryptographically inaccessible to us. We can only provide guidance on using in-app controls to manage your own data. For AdMob data requests, please contact Google directly via <a href="https://myaccount.google.com" target="_blank">myaccount.google.com</a>.</p>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <h2 id="s11">11. Children's Privacy (COPPA)</h2>
+
+    <div class="danger">
+        <strong>This app is not directed at or intended for use by children under the age of 13.</strong>
+    </div>
+
+    <ul>
+        <li>Hide Calculator is designed for general adult audiences. It is not a children's app and does not participate in Google Play's Families program.</li>
+        <li>We do not knowingly collect personal information from children under 13.</li>
+        <li>Google AdMob is integrated in compliance with COPPA. We do not target ads based on child-directed content, and the app is not designated as child-directed within AdMob's settings.</li>
+        <li>If you are a parent or guardian and believe your child has used this app, the vault data is stored only on the device and can be permanently deleted by uninstalling the app or clearing app data. Since vault contents are inaccessible to us, there is nothing for us to delete on our end.</li>
+        <li>Please contact us at <a href="mailto:un0scroll@gmail.com">un0scroll@gmail.com</a> if you have concerns about a child's use of this app.</li>
+    </ul>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <h2 id="s12">12. International Users — GDPR &amp; CCPA</h2>
+
+    <h3>12.1 European Union / EEA / United Kingdom (GDPR)</h3>
+    <p>If you are in the EU, EEA, or UK, the General Data Protection Regulation (GDPR) may apply to the data processing performed by AdMob on our behalf.</p>
+    <ul>
+        <li><strong>Data Controller:</strong> Google LLC acts as data controller or processor for data collected via AdMob, subject to Google's GDPR compliance framework and Data Processing Agreements.</li>
+        <li><strong>Lawful Basis:</strong> Where AdMob serves personalized ads, the lawful basis is your <strong>consent</strong> (if a consent management mechanism is shown) or Google's <strong>legitimate interest</strong> in fraud prevention and basic ad delivery. There is no other personal data processing by us.</li>
+        <li><strong>International Data Transfers:</strong> Data collected by AdMob may be processed in the United States and other countries where Google operates. Google relies on Standard Contractual Clauses (SCCs) and other GDPR-adequate transfer mechanisms for international data transfers.</li>
+        <li><strong>Your Rights Under GDPR:</strong> You have the right to access, rectify, erase (right to be forgotten), restrict processing, port your data, and object to processing. For vault data — which only exists on your device — you exercise these rights directly through the app. For AdMob data held by Google, use <a href="https://myaccount.google.com" target="_blank">Google's privacy dashboard</a> or contact your local data protection authority (DPA).</li>
+        <li><strong>No DPO Required:</strong> As a small independent developer, we are not required to appoint a Data Protection Officer. Contact us directly at <a href="mailto:un0scroll@gmail.com">un0scroll@gmail.com</a> for any GDPR-related inquiries.</li>
+    </ul>
+
+    <h3>12.2 California Residents (CCPA / CPRA)</h3>
+    <p>If you are a California resident, the California Consumer Privacy Act (CCPA) / California Privacy Rights Act (CPRA) may apply.</p>
+    <ul>
+        <li><strong>Right to Know:</strong> This Privacy Policy constitutes our disclosure of what data we collect and how it is used.</li>
+        <li><strong>Right to Delete:</strong> You may delete vault data yourself using in-app controls or by clearing app data. AdMob data held by Google can be deleted via Google's privacy tools.</li>
+        <li><strong>Right to Opt Out of Sale / Sharing:</strong> <strong>We do not sell your personal information.</strong> AdMob may engage in cross-context behavioral advertising which may constitute "sharing" under CPRA. You can opt out of this via the Android ad personalization settings described in Section 10.2.</li>
+        <li><strong>Right to Correct:</strong> Vault metadata (album names, tags, favorites) can be corrected directly in the app.</li>
+        <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any of your CCPA/CPRA rights.</li>
+        <li><strong>Response Time:</strong> We will respond to verifiable CCPA data requests within 45 days. Contact us at <a href="mailto:un0scroll@gmail.com">un0scroll@gmail.com</a>.</li>
+    </ul>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <h2 id="s13">13. Policy Updates</h2>
+    <p>We may update this Privacy Policy to reflect changes in the app, new features, new permissions, changes to third-party SDKs, or updated legal requirements.</p>
+    <ul>
+        <li>The <strong>"Last Updated"</strong> date at the top of this page will always reflect the most recent revision.</li>
+        <li><strong>Material changes</strong> (e.g., a new data collection practice, a new third-party SDK, or a change in how we use data) will be communicated via an in-app notification and/or a notice in the Google Play Store listing before taking effect.</li>
+        <li><strong>Minor changes</strong> (typo corrections, clarifications, formatting improvements) will update the date without a separate notification.</li>
+        <li>Continued use of the app after any update constitutes your acceptance of the revised policy.</li>
+        <li>If you disagree with an update, you may stop using the app and uninstall it. All locally stored data will be permanently deleted upon uninstallation.</li>
+        <li>The current version of this policy is always available at the URL linked in the Google Play Store listing.</li>
+    </ul>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <h2 id="s14">14. Legal Compliance &amp; Google Play</h2>
+
+    <div class="success">
+        <p><strong>Google Play Policy Compliance Statement</strong></p>
+        <p>This Privacy Policy is designed and maintained in full compliance with the <strong>Google Play User Data Policy</strong>, including all requirements for prominent disclosure, limited use of sensitive data, and accurate Data Safety section declarations.</p>
+        <p>This policy specifically aligns with:</p>
+        <ul>
+            <li><a href="https://support.google.com/googleplay/android-developer/answer/10144311" target="_blank"><strong>Google Play User Data Policy</strong></a> — requirements for transparency about data collection, use, sharing, handling, and security.</li>
+            <li><a href="https://support.google.com/googleplay/android-developer/answer/9859455" target="_blank"><strong>Google Play Data Safety Section Requirements</strong></a> — providing accurate and complete declarations in the Play Console Data Safety form.</li>
+        </ul>
+    </div>
+
+    <p>This app is additionally maintained in alignment with:</p>
+    <ul>
+        <li><span class="badge">GDPR</span> General Data Protection Regulation (EU) 2016/679 — as applicable to AdMob data processing by Google</li>
+        <li><span class="badge">CCPA/CPRA</span> California Consumer Privacy Act / California Privacy Rights Act — as applicable to California residents</li>
+        <li><span class="badge">COPPA</span> Children's Online Privacy Protection Act — app is not directed at children under 13</li>
+        <li><span class="badge badge-green">AdMob</span> Google Mobile Ads SDK policies — AdMob is integrated per Google's developer guidelines</li>
+        <li><span class="badge badge-gray">Android</span> Android best practices — Android Keystore, EncryptedSharedPreferences, backup exclusion rules, app-private storage</li>
+    </ul>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <h2 id="s15">15. Disclaimer</h2>
+    <div class="warning">
+        <ul>
+            <li><strong>Zero-Knowledge Design:</strong> We have no access to your vault contents, PIN, or encryption keys — by design. We cannot recover a forgotten PIN or decrypt your files under any circumstances.</li>
+            <li><strong>No PIN Recovery:</strong> There is no "Forgot PIN" function. If you forget your PIN, access to the vault is permanently lost. Record your PIN in a secure password manager.</li>
+            <li><strong>Backup Recommended:</strong> We strongly recommend regularly exporting important media from the vault to a secure external backup. Uninstalling the app permanently and irrecoverably deletes all vault contents.</li>
+            <li><strong>Device Security:</strong> App security depends partly on your device's overall security. Use a strong device screen lock, keep your Android OS updated, and do not share your device with untrusted individuals.</li>
+            <li><strong>"As Is" Provision:</strong> This app is provided "as is." While we implement industry-standard security measures, no software is 100% infallible. We are not liable for data loss resulting from device failure, accidental uninstallation, OS bugs, or circumstances outside our control.</li>
+        </ul>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════ -->
+    <h2 id="s16">16. Contact Us</h2>
+    <div class="contact">
+        <p>For questions, concerns, or data requests regarding this Privacy Policy:</p>
+        <p><strong>Email:</strong> <a href="mailto:un0scroll@gmail.com">un0scroll@gmail.com</a></p>
+        <p><strong>Developer:</strong> Alok and Himanshu</p>
+        <p><strong>General Response Time:</strong> Within 48 hours</p>
+        <p><strong>CCPA Requests:</strong> Within 45 days as required by law</p>
+        <p><strong>Language:</strong> Please write in English for the fastest response.</p>
+        <p style="margin-top: 12px; color: #6b7280; font-size: 0.91em;"><em>Important note: Vault contents are stored exclusively on your device, encrypted with keys that are technically inaccessible to us. We have no ability to access, view, retrieve, or modify your vault data. For vault-level data requests, we can only provide guidance on using the in-app controls.</em></p>
+    </div>
+
+    <hr>
+
+    <p class="footer-note">
+        <strong>Hide Calculator</strong> — Secure Photo &amp; Video Vault<br>
+        &copy; 2026 Alok and Himanshu. All rights reserved.<br>
+        Privacy Policy last updated: <strong>March 1, 2026</strong>
+    </p>
+
+</div>
 </body>
 </html>
