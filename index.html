@@ -295,6 +295,11 @@
             <td>Internet or electronic network activity</td>
             <td>Ad performance measurement</td>
         </tr>
+        <tr>
+            <td>Diagnostics data (SDK crash logs, ad loading performance, error logs)</td>
+            <td>Diagnostics / Performance data</td>
+            <td>SDK stability monitoring; ad delivery optimization; error reporting</td>
+        </tr>
     </table>
 
     <p><strong>Categories of Personal Information collected (for CCPA/VCDPA/LGPD compliance):</strong></p>
@@ -303,10 +308,11 @@
         <li><strong>Internet or electronic network activity:</strong> Ad views, ad clicks, interaction data</li>
         <li><strong>Geolocation data:</strong> Approximate (city-level) location derived from IP address — <em>not</em> precise GPS</li>
         <li><strong>Device information:</strong> Device model, operating system version, screen resolution</li>
+        <li><strong>Diagnostics:</strong> Ad SDK crash logs, ad loading performance metrics, error and latency data</li>
     </ul>
 
     <div class="success">
-        <strong>No Other Third-Party SDKs:</strong> Hide Calculator does <strong>not</strong> integrate Firebase, analytics tools, crash-reporting services, social media SDKs, data brokers, behavioral tracking networks, or any other external services. AdMob is the only SDK that makes outbound network connections.
+        <strong>No Other Third-Party SDKs:</strong> Hide Calculator does <strong>not</strong> integrate Firebase, analytics tools, crash-reporting services, social media SDKs, data brokers, behavioral tracking networks, or any other external services. AdMob is the only SDK that makes outbound network connections. Note that AdMob automatically collects limited diagnostic data (SDK crash logs and ad performance metrics) as part of its standard operation — see Section 2.2 for details.
     </div>
 
 
@@ -339,7 +345,7 @@
         <h4>Google AdMob (play-services-ads v23.5.0)</h4>
         <p><strong>Purpose:</strong> Display banner advertisements to support the free app.<br>
         <strong>Ad Format:</strong> Banner ads shown at the bottom of select screens.<br>
-        <strong>Data Collected:</strong> Advertising ID, device info, IP address, ad interaction signals.<br>
+        <strong>Data Collected:</strong> Advertising ID, device info, IP address, ad interaction signals, diagnostics data (SDK crash logs, performance metrics).<br>
         <strong>Data Sent To:</strong> Google LLC (United States and other countries where Google operates).<br>
         <strong>Google Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a><br>
         <strong>AdMob Help:</strong> <a href="https://support.google.com/admob/answer/6128543" target="_blank">https://support.google.com/admob/answer/6128543</a><br>
@@ -444,6 +450,12 @@
             <td>Advertising</td>
             <td>No — inherent to ad display</td>
         </tr>
+        <tr>
+            <td>Diagnostics (SDK crash logs, performance data)</td>
+            <td>Google AdMob</td>
+            <td>Advertising, Analytics</td>
+            <td>No — collected automatically by AdMob SDK</td>
+        </tr>
     </table>
 
     <h3>Data Collected (Stays On Device — Not Shared)</h3>
@@ -493,8 +505,8 @@
             <td>Not applicable</td>
         </tr>
         <tr>
-            <td>Crash logs or diagnostics</td>
-            <td>No crash-reporting SDK is integrated</td>
+            <td>Crash logs or diagnostics (from the app itself)</td>
+            <td>No crash-reporting SDK is integrated. Note: Google AdMob may collect its own SDK-level diagnostic data (see Section 2.2).</td>
         </tr>
         <tr>
             <td>Usage analytics</td>
@@ -529,9 +541,9 @@
             <th>Can You Opt Out?</th>
         </tr>
         <tr>
-            <td>Advertising ID, IP address, device info, ad interactions</td>
+            <td>Advertising ID, IP address, device info, ad interactions, diagnostics</td>
             <td>Google LLC (AdMob)</td>
-            <td>To display banner advertisements</td>
+            <td>To display banner advertisements; SDK performance monitoring</td>
             <td>Yes — see Section 7.2 below</td>
         </tr>
         <tr>
@@ -753,7 +765,7 @@
     <h3>12.2 California Residents (CCPA / CPRA)</h3>
     <p>If you are a California resident, the California Consumer Privacy Act (CCPA) / California Privacy Rights Act (CPRA) may apply.</p>
     <ul>
-        <li><strong>Right to Know:</strong> You have the right to know what categories of personal information we collect, the purposes for collection, and whether your personal information is sold or shared. This Privacy Policy constitutes our disclosure — see Sections 2.2 and 7 for full details. The categories of personal information collected via AdMob include: <em>Identifiers</em> (Advertising ID, IP address), <em>Internet or electronic network activity</em> (ad views, clicks), <em>Geolocation data</em> (approximate, IP-derived), and <em>Device information</em>.</li>
+        <li><strong>Right to Know:</strong> You have the right to know what categories of personal information we collect, the purposes for collection, and whether your personal information is sold or shared. This Privacy Policy constitutes our disclosure — see Sections 2.2 and 7 for full details. The categories of personal information collected via AdMob include: <em>Identifiers</em> (Advertising ID, IP address), <em>Internet or electronic network activity</em> (ad views, clicks), <em>Geolocation data</em> (approximate, IP-derived), <em>Device information</em>, and <em>Diagnostics</em> (SDK crash logs, performance data).</li>
         <li><strong>Right to Delete:</strong> You may delete vault data yourself using in-app controls or by clearing app data. AdMob data held by Google can be deleted via Google's privacy tools at <a href="https://myaccount.google.com" target="_blank">myaccount.google.com</a>.</li>
         <li><strong>Right to Opt Out of Sale / Sharing:</strong> <strong>We do not sell your personal information.</strong> AdMob may engage in cross-context behavioral advertising which may constitute "sharing" under CPRA. You can opt out of this via the Android ad personalization settings described in <a href="#do-not-sell">Section 7.2</a>. You may also submit an opt-out request by emailing <a href="mailto:un0scroll@gmail.com">un0scroll@gmail.com</a> with the subject "Do Not Sell or Share My Data."</li>
         <li><strong>Right to Correct:</strong> Vault metadata (album names, tags, favorites) can be corrected directly in the app.</li>
