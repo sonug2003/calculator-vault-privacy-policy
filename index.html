@@ -170,7 +170,7 @@
             <li><a href="#s9">Security Architecture</a></li>
             <li><a href="#s10">Your Rights &amp; Controls</a></li>
             <li><a href="#s11">Children's Privacy (COPPA)</a></li>
-            <li><a href="#s12">International Users — GDPR &amp; CCPA</a></li>
+            <li><a href="#s12">International &amp; State Privacy Laws (GDPR, CCPA, VCDPA, LGPD)</a></li>
             <li><a href="#s13">Policy Updates</a></li>
             <li><a href="#s14">Legal Compliance &amp; Google Play</a></li>
             <li><a href="#s15">Disclaimer</a></li>
@@ -257,35 +257,53 @@
         <strong>Android Backup Explicitly Disabled:</strong> The app sets <code>android:allowBackup="false"</code> and uses a <code>data_extraction_rules.xml</code> file that explicitly excludes the vault directory, thumbnails directory, Room database, and all security preferences from both <strong>Google Cloud Backup</strong> and <strong>device-to-device transfer</strong>. Your vault contents can never be restored from a Google account backup.
     </div>
 
-    <h3>2.2 Data Collected Automatically by Google AdMob</h3>
+    <h3>2.2 Data Collected Automatically by Google AdMob (Personal Information)</h3>
     <p>The app displays banner advertisements powered by Google AdMob (<code>play-services-ads:23.5.0</code>). AdMob automatically collects limited technical data from your device when ads load. <strong>This is the only data that leaves your device.</strong> We do not control or have access to this data — it is processed by Google subject to their own privacy policy.</p>
+
+    <div class="warning">
+        <strong>Personal Information Disclosure:</strong> Some of the data collected by AdMob — including your IP address, Advertising ID, and device identifiers — may constitute <strong>Personal Information</strong> under applicable privacy laws (GDPR, CCPA/CPRA, VCDPA, LGPD, and others). This data is collected and processed by Google, not by us. We do not have access to this data in identified form. See Sections 10 and 12 for your rights and opt-out options.
+    </div>
 
     <table>
         <tr>
             <th>Data Type</th>
+            <th>Category (Privacy Law Classification)</th>
             <th>Purpose</th>
         </tr>
         <tr>
             <td>Advertising ID (Google Advertising ID / GAID)</td>
+            <td>Device or other identifiers / Personal Information</td>
             <td>Serve relevant ads; frequency capping; ad measurement</td>
         </tr>
         <tr>
+            <td>IP address (transient)</td>
+            <td>Online identifiers / Personal Information</td>
+            <td>Network request routing; fraud prevention; approximate geolocation</td>
+        </tr>
+        <tr>
             <td>Approximate location (derived from IP address)</td>
+            <td>Geolocation data (coarse only)</td>
             <td>Serve geographically relevant advertisements</td>
         </tr>
         <tr>
-            <td>Device model, Android version</td>
+            <td>Device model, OS version, screen size</td>
+            <td>Device information / Internet activity</td>
             <td>Ad format compatibility and targeting</td>
         </tr>
         <tr>
-            <td>IP address (transient)</td>
-            <td>Network request routing; fraud prevention</td>
-        </tr>
-        <tr>
             <td>App interaction signals (ad views, clicks)</td>
+            <td>Internet or electronic network activity</td>
             <td>Ad performance measurement</td>
         </tr>
     </table>
+
+    <p><strong>Categories of Personal Information collected (for CCPA/VCDPA/LGPD compliance):</strong></p>
+    <ul>
+        <li><strong>Identifiers:</strong> Advertising ID, IP address</li>
+        <li><strong>Internet or electronic network activity:</strong> Ad views, ad clicks, interaction data</li>
+        <li><strong>Geolocation data:</strong> Approximate (city-level) location derived from IP address — <em>not</em> precise GPS</li>
+        <li><strong>Device information:</strong> Device model, operating system version, screen resolution</li>
+    </ul>
 
     <div class="success">
         <strong>No Other Third-Party SDKs:</strong> Hide Calculator does <strong>not</strong> integrate Firebase, analytics tools, crash-reporting services, social media SDKs, data brokers, behavioral tracking networks, or any other external services. AdMob is the only SDK that makes outbound network connections.
@@ -495,10 +513,56 @@
 
     <!-- ═══════════════════════════════════════════ -->
     <h2 id="s7">7. Data Sharing &amp; Disclosure</h2>
-    <p>We do not sell your personal data. Your vault contents are never shared with anyone under any circumstance. The only external data transmission is the limited technical data sent to Google AdMob as described above.</p>
 
+    <div class="highlight">
+        <strong>Your Right to Know About Data Sharing:</strong> You have the right to know whether your personal data is shared with third parties and who those third parties are. This section provides full transparency about all data sharing that occurs through the app.
+    </div>
+
+    <p><strong>We do not sell your personal data.</strong> We do not share your personal data for cross-context behavioral advertising purposes except through AdMob as described below. Your vault contents (photos, videos, and all files you store) are <strong>never shared with anyone</strong> under any circumstance — they never leave your device.</p>
+
+    <h3>7.1 Summary of Data Sharing</h3>
+    <table>
+        <tr>
+            <th>Data Shared</th>
+            <th>Shared With</th>
+            <th>Purpose</th>
+            <th>Can You Opt Out?</th>
+        </tr>
+        <tr>
+            <td>Advertising ID, IP address, device info, ad interactions</td>
+            <td>Google LLC (AdMob)</td>
+            <td>To display banner advertisements</td>
+            <td>Yes — see Section 7.2 below</td>
+        </tr>
+        <tr>
+            <td>Vault contents (photos, videos, files)</td>
+            <td><strong>Nobody — never shared</strong></td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>PIN, biometric data, preferences</td>
+            <td><strong>Nobody — never shared</strong></td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+    </table>
+
+    <h3 id="do-not-sell">7.2 Do Not Sell or Share My Personal Information</h3>
+    <p><strong>We do not sell your personal information.</strong> However, the use of Google AdMob may constitute "sharing" of personal information (as defined under CCPA/CPRA) or "targeted advertising" (as defined under VCDPA) because AdMob uses your Advertising ID and device information to serve personalized ads.</p>
+    <p><strong>You have the right to opt out of the sale or sharing of your personal data for targeted advertising.</strong> To exercise this right:</p>
+    <ol>
+        <li>Open your device's <strong>Settings</strong> app.</li>
+        <li>Navigate to <strong>Google &gt; Ads</strong> (path may vary by manufacturer; on some devices: <em>Settings &gt; Privacy &gt; Ads</em>).</li>
+        <li>Enable <strong>"Opt out of Ads Personalization"</strong> (or <strong>"Delete advertising ID"</strong> on Android 12+).</li>
+        <li>Optionally, tap <strong>"Reset advertising ID"</strong> to generate a new anonymous identifier.</li>
+    </ol>
+    <p>After opting out, you will still see ads, but they will <strong>not be personalized</strong> based on your activity or interests. This setting applies device-wide to all apps that use AdMob.</p>
+    <p>You can also submit an opt-out request by emailing us at <a href="mailto:un0scroll@gmail.com">un0scroll@gmail.com</a> with the subject line <strong>"Do Not Sell or Share My Data"</strong>. We will respond within 15 business days with instructions to complete the opt-out on your device.</p>
+
+    <h3>7.3 Other Disclosures</h3>
     <ul>
-        <li><strong>Google AdMob:</strong> Limited technical data is transmitted to Google for ad serving purposes, as described in Section 4. This is governed by Google's terms — not sold to other parties by us.</li>
+        <li><strong>Google AdMob:</strong> Limited technical data (Personal Information as classified in Section 2.2) is transmitted to Google for ad serving purposes, as described in Section 4. This is governed by Google's terms — not sold to other parties by us.</li>
         <li><strong>Legal Requirements:</strong> We may disclose information if required by law, court order, or governmental authority. Since vault contents are device-only and cryptographically inaccessible to us, we have no ability to disclose them even if compelled.</li>
         <li><strong>Business Transfers:</strong> If the app or developer business is sold or transferred, any data practices described in this policy will be maintained. Users will be notified of any material change in advance.</li>
     </ul>
@@ -626,8 +690,22 @@
     </ol>
     <p>You will still see ads after opting out, but they will not be personalized based on your Advertising ID. This setting applies device-wide to all apps using AdMob.</p>
 
-    <h3>10.3 Submitting Data Requests</h3>
-    <p>For any questions about your data or to submit a formal data request (access, correction, deletion, objection), contact us at <a href="mailto:un0scroll@gmail.com">un0scroll@gmail.com</a>.</p>
+    <h3>10.3 Opt Out of Data Sale / Targeted Ads</h3>
+    <p>You have the right to opt out of the sharing or selling of your personal data for targeted advertising purposes. See <a href="#do-not-sell">Section 7.2 — "Do Not Sell or Share My Personal Information"</a> for detailed step-by-step instructions.</p>
+
+    <h3>10.4 Right to Lodge a Complaint</h3>
+    <p>If you believe your data protection rights have been violated, you have the right to lodge a complaint with the appropriate supervisory authority in your jurisdiction:</p>
+    <ul>
+        <li><strong>EU / EEA / UK (GDPR):</strong> Contact your local Data Protection Authority (DPA). A list of EU DPAs is available at <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank">edpb.europa.eu</a>. UK residents may contact the <a href="https://ico.org.uk" target="_blank">Information Commissioner's Office (ICO)</a>.</li>
+        <li><strong>California (CCPA/CPRA):</strong> Contact the <a href="https://oag.ca.gov/privacy" target="_blank">California Attorney General's Office</a> or the <a href="https://cppa.ca.gov" target="_blank">California Privacy Protection Agency (CPPA)</a>.</li>
+        <li><strong>Virginia (VCDPA):</strong> Contact the <a href="https://www.oag.state.va.us" target="_blank">Virginia Attorney General's Office</a>.</li>
+        <li><strong>Brazil (LGPD):</strong> Contact the <a href="https://www.gov.br/anpd" target="_blank">Autoridade Nacional de Proteção de Dados (ANPD)</a>.</li>
+        <li><strong>Other jurisdictions:</strong> Contact your local privacy or consumer protection authority.</li>
+    </ul>
+    <p>Before filing a complaint, we encourage you to contact us first at <a href="mailto:un0scroll@gmail.com">un0scroll@gmail.com</a> so we can attempt to resolve your concern directly.</p>
+
+    <h3>10.5 Submitting Data Requests</h3>
+    <p>For any questions about your data or to submit a formal data request (access, correction, deletion, objection, opt-out of sale/sharing), contact us at <a href="mailto:un0scroll@gmail.com">un0scroll@gmail.com</a>.</p>
     <p>Please note: vault contents exist exclusively on your physical device and are cryptographically inaccessible to us. We can only provide guidance on using in-app controls to manage your own data. For AdMob data requests, please contact Google directly via <a href="https://myaccount.google.com" target="_blank">myaccount.google.com</a>.</p>
 
 
@@ -648,7 +726,7 @@
 
 
     <!-- ═══════════════════════════════════════════ -->
-    <h2 id="s12">12. International Users — GDPR &amp; CCPA</h2>
+    <h2 id="s12">12. International &amp; State Privacy Laws (GDPR, CCPA, VCDPA, LGPD)</h2>
 
     <h3>12.1 European Union / EEA / United Kingdom (GDPR)</h3>
     <p>If you are in the EU, EEA, or UK, the General Data Protection Regulation (GDPR) may apply to the data processing performed by AdMob on our behalf.</p>
@@ -656,19 +734,64 @@
         <li><strong>Data Controller:</strong> Google LLC acts as data controller or processor for data collected via AdMob, subject to Google's GDPR compliance framework and Data Processing Agreements.</li>
         <li><strong>Lawful Basis:</strong> Where AdMob serves personalized ads, the lawful basis is your <strong>consent</strong> (if a consent management mechanism is shown) or Google's <strong>legitimate interest</strong> in fraud prevention and basic ad delivery. There is no other personal data processing by us.</li>
         <li><strong>International Data Transfers:</strong> Data collected by AdMob may be processed in the United States and other countries where Google operates. Google relies on Standard Contractual Clauses (SCCs) and other GDPR-adequate transfer mechanisms for international data transfers.</li>
-        <li><strong>Your Rights Under GDPR:</strong> You have the right to access, rectify, erase (right to be forgotten), restrict processing, port your data, and object to processing. For vault data — which only exists on your device — you exercise these rights directly through the app. For AdMob data held by Google, use <a href="https://myaccount.google.com" target="_blank">Google's privacy dashboard</a> or contact your local data protection authority (DPA).</li>
+        <li><strong>Your Rights Under GDPR:</strong> You have the right to:
+            <ul>
+                <li><strong>Access</strong> the personal data processed about you</li>
+                <li><strong>Rectify</strong> inaccurate personal data</li>
+                <li><strong>Erase</strong> your personal data (right to be forgotten)</li>
+                <li><strong>Restrict</strong> or <strong>object to</strong> processing</li>
+                <li><strong>Data portability</strong> — receive your data in a structured format</li>
+                <li><strong>Withdraw consent</strong> at any time (where processing is based on consent)</li>
+                <li><strong>Lodge a complaint</strong> with your local Data Protection Authority (DPA)</li>
+            </ul>
+            For vault data — which only exists on your device — you exercise these rights directly through the app. For AdMob data held by Google, use <a href="https://myaccount.google.com" target="_blank">Google's privacy dashboard</a>.
+        </li>
+        <li><strong>Right to Lodge a Complaint:</strong> If you believe your rights under GDPR have been violated, you have the right to lodge a complaint with your local supervisory authority. A full list of EU/EEA Data Protection Authorities is available at <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank">edpb.europa.eu</a>. UK residents may contact the <a href="https://ico.org.uk" target="_blank">Information Commissioner's Office (ICO)</a>.</li>
         <li><strong>No DPO Required:</strong> As a small independent developer, we are not required to appoint a Data Protection Officer. Contact us directly at <a href="mailto:un0scroll@gmail.com">un0scroll@gmail.com</a> for any GDPR-related inquiries.</li>
     </ul>
 
     <h3>12.2 California Residents (CCPA / CPRA)</h3>
     <p>If you are a California resident, the California Consumer Privacy Act (CCPA) / California Privacy Rights Act (CPRA) may apply.</p>
     <ul>
-        <li><strong>Right to Know:</strong> This Privacy Policy constitutes our disclosure of what data we collect and how it is used.</li>
-        <li><strong>Right to Delete:</strong> You may delete vault data yourself using in-app controls or by clearing app data. AdMob data held by Google can be deleted via Google's privacy tools.</li>
-        <li><strong>Right to Opt Out of Sale / Sharing:</strong> <strong>We do not sell your personal information.</strong> AdMob may engage in cross-context behavioral advertising which may constitute "sharing" under CPRA. You can opt out of this via the Android ad personalization settings described in Section 10.2.</li>
+        <li><strong>Right to Know:</strong> You have the right to know what categories of personal information we collect, the purposes for collection, and whether your personal information is sold or shared. This Privacy Policy constitutes our disclosure — see Sections 2.2 and 7 for full details. The categories of personal information collected via AdMob include: <em>Identifiers</em> (Advertising ID, IP address), <em>Internet or electronic network activity</em> (ad views, clicks), <em>Geolocation data</em> (approximate, IP-derived), and <em>Device information</em>.</li>
+        <li><strong>Right to Delete:</strong> You may delete vault data yourself using in-app controls or by clearing app data. AdMob data held by Google can be deleted via Google's privacy tools at <a href="https://myaccount.google.com" target="_blank">myaccount.google.com</a>.</li>
+        <li><strong>Right to Opt Out of Sale / Sharing:</strong> <strong>We do not sell your personal information.</strong> AdMob may engage in cross-context behavioral advertising which may constitute "sharing" under CPRA. You can opt out of this via the Android ad personalization settings described in <a href="#do-not-sell">Section 7.2</a>. You may also submit an opt-out request by emailing <a href="mailto:un0scroll@gmail.com">un0scroll@gmail.com</a> with the subject "Do Not Sell or Share My Data."</li>
         <li><strong>Right to Correct:</strong> Vault metadata (album names, tags, favorites) can be corrected directly in the app.</li>
+        <li><strong>Right to Limit Use of Sensitive Personal Information:</strong> We do not collect or process sensitive personal information as defined under CPRA.</li>
         <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any of your CCPA/CPRA rights.</li>
+        <li><strong>Right to Lodge a Complaint:</strong> You may file a complaint with the <a href="https://oag.ca.gov/privacy" target="_blank">California Attorney General's Office</a> or the <a href="https://cppa.ca.gov" target="_blank">California Privacy Protection Agency (CPPA)</a>.</li>
         <li><strong>Response Time:</strong> We will respond to verifiable CCPA data requests within 45 days. Contact us at <a href="mailto:un0scroll@gmail.com">un0scroll@gmail.com</a>.</li>
+    </ul>
+
+    <h3>12.3 Virginia Residents (VCDPA)</h3>
+    <p>If you are a Virginia resident, the <strong>Virginia Consumer Data Protection Act (VCDPA)</strong> (Va. Code § 59.1-575 et seq.) may apply to the processing of your personal data through AdMob.</p>
+    <ul>
+        <li><strong>Right to Know / Access:</strong> You have the right to confirm whether we are processing your personal data and to access that data. The personal data processed via AdMob is described in Section 2.2.</li>
+        <li><strong>Right to Correct:</strong> You may correct inaccuracies in your personal data. Vault metadata can be corrected directly in the app.</li>
+        <li><strong>Right to Delete:</strong> You may request deletion of your personal data. Vault data can be deleted via in-app controls. For AdMob data, use <a href="https://myaccount.google.com" target="_blank">Google's privacy tools</a>.</li>
+        <li><strong>Right to Data Portability:</strong> You may obtain a copy of your personal data in a portable, readily usable format. Vault files can be exported from within the app. For AdMob data, contact Google via <a href="https://takeout.google.com" target="_blank">Google Takeout</a>.</li>
+        <li><strong>Right to Opt Out of Targeted Advertising:</strong> AdMob may use your personal data for targeted advertising. You have the right to opt out. Follow the instructions in <a href="#do-not-sell">Section 7.2</a> to opt out via your device's ad personalization settings.</li>
+        <li><strong>Right to Opt Out of Sale:</strong> <strong>We do not sell your personal data</strong> as defined under the VCDPA.</li>
+        <li><strong>Right to Opt Out of Profiling:</strong> We do not engage in profiling in furtherance of decisions that produce legal or similarly significant effects concerning you.</li>
+        <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your VCDPA rights.</li>
+        <li><strong>Right to Appeal:</strong> If we decline to take action on your request, you may appeal by emailing <a href="mailto:un0scroll@gmail.com">un0scroll@gmail.com</a> with the subject "VCDPA Appeal." If your appeal is denied, you may contact the <a href="https://www.oag.state.va.us" target="_blank">Virginia Attorney General's Office</a> to file a complaint.</li>
+        <li><strong>Response Time:</strong> We will respond to verified VCDPA requests within 45 days. In complex cases, we may extend by an additional 45 days with notice.</li>
+    </ul>
+
+    <h3>12.4 Brazil Residents (LGPD)</h3>
+    <p>If you are a resident of Brazil, the <strong>Lei Geral de Proteção de Dados (LGPD)</strong> (Law No. 13,709/2018) may apply to the processing of your personal data through AdMob.</p>
+    <ul>
+        <li><strong>Legal Basis:</strong> Where AdMob serves personalized ads, the legal basis is your <strong>consent</strong> or Google's <strong>legitimate interest</strong> in basic ad delivery and fraud prevention.</li>
+        <li><strong>Right to Confirmation &amp; Access:</strong> You have the right to confirm the existence of processing of your personal data and to access it. See Section 2.2 for full details of data collected.</li>
+        <li><strong>Right to Correction:</strong> You may request correction of incomplete, inaccurate, or outdated personal data.</li>
+        <li><strong>Right to Anonymization, Blocking, or Deletion:</strong> You may request anonymization, blocking, or deletion of unnecessary or excessive personal data, or data processed in non-compliance with LGPD.</li>
+        <li><strong>Right to Data Portability:</strong> You may request portability of your personal data to another service provider or product.</li>
+        <li><strong>Right to Deletion:</strong> You may request deletion of personal data processed with your consent. Vault data can be deleted via in-app controls. For AdMob data, use <a href="https://myaccount.google.com" target="_blank">Google's privacy tools</a>.</li>
+        <li><strong>Right to Information:</strong> You have the right to information about public and private entities with which your data has been shared (see Section 7).</li>
+        <li><strong>Right to Revoke Consent:</strong> You may revoke your consent for data processing at any time by opting out of ad personalization (see <a href="#do-not-sell">Section 7.2</a>).</li>
+        <li><strong>Right to Opposition:</strong> You may oppose data processing carried out in violation of LGPD provisions.</li>
+        <li><strong>Right to Lodge a Complaint:</strong> You have the right to file a complaint with the <a href="https://www.gov.br/anpd" target="_blank">Autoridade Nacional de Proteção de Dados (ANPD)</a>, Brazil's national data protection authority.</li>
+        <li><strong>Response Time:</strong> We will respond to LGPD requests within 15 business days. Contact us at <a href="mailto:un0scroll@gmail.com">un0scroll@gmail.com</a>.</li>
     </ul>
 
 
@@ -702,6 +825,8 @@
     <ul>
         <li><span class="badge">GDPR</span> General Data Protection Regulation (EU) 2016/679 — as applicable to AdMob data processing by Google</li>
         <li><span class="badge">CCPA/CPRA</span> California Consumer Privacy Act / California Privacy Rights Act — as applicable to California residents</li>
+        <li><span class="badge">VCDPA</span> Virginia Consumer Data Protection Act — as applicable to Virginia residents</li>
+        <li><span class="badge">LGPD</span> Lei Geral de Proteção de Dados (Brazil) — as applicable to Brazilian residents</li>
         <li><span class="badge">COPPA</span> Children's Online Privacy Protection Act — app is not directed at children under 13</li>
         <li><span class="badge badge-green">AdMob</span> Google Mobile Ads SDK policies — AdMob is integrated per Google's developer guidelines</li>
         <li><span class="badge badge-gray">Android</span> Android best practices — Android Keystore, EncryptedSharedPreferences, backup exclusion rules, app-private storage</li>
